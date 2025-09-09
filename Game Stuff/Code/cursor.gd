@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed: int = 10
+var speed: int = 15
 var previous_pos: Vector2
 
 @onready var world = $".."
