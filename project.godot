@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="d_u"
+run/main_scene="uid://g4d3ghwfpamd"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://Game Stuff/Assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -21,3 +28,4 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
