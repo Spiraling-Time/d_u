@@ -19,3 +19,6 @@ func _physics_process(delta: float) -> void:
 			game_playing = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			
+
+func next_level():
+	print("clicked")

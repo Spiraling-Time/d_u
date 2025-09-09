@@ -3,10 +3,13 @@ extends Node2D
 var speed: int = 15
 var previous_pos: Vector2
 
+
 @onready var world = $".."
 @onready var mouse = $cursorSprite
 @onready var camera = $Camera2D
 @onready var ray = $cursorSprite/RayCast2D
+@onready var button_ray = $cursorSprite/RayCast2D2
+
 
 func _ready() -> void:
 	pass
@@ -30,3 +33,8 @@ func _physics_process(delta: float) -> void:
 			camera.position.x -= speed
 		elif Input.get_action_strength("right") >= 0.5:
 			camera.position.x += speed
+		
+		button_ray.force_raycast_update()
+		if Input.is_action_just_pressed("clicked"):
+			if button_ray.is_colliding(): world.next_level()
+	
