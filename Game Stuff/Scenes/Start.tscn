@@ -9,6 +9,7 @@
 texture = ExtResource("2_tfnar")
 texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 
 [sub_resource type="TileSet" id="TileSet_htoip"]
 tile_size = Vector2i(100, 100)
@@ -17,7 +18,7 @@ sources/0 = SubResource("TileSetAtlasSource_tfnar")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iih8"]
 texture = ExtResource("3_htoip")
-texture_region_size = Vector2i(100, 100)
+texture_region_size = Vector2i(1, 1)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_80feh"]
