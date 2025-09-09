@@ -1,5 +1,8 @@
 extends Node2D
 
+
+@onready var level = name
+
 var game_playing: bool = true
 
 

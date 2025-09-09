@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 var world
 
@@ -16,3 +16,10 @@ func _on_timer_timeout() -> void:
 	world.add_child(newspawn)
 	spawn.wait_time = randi_range(5,15)/10
 	spawn.start()
+
+
+func _physics_process(delta: float) -> void:
+	print(world.level)
+	if world.level == "level3":
+		velocity.y = -50
+		move_and_slide()

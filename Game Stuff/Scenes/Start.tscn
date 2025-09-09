@@ -28,7 +28,7 @@ sources/0 = SubResource("TileSetAtlasSource_2iih8")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2iih8"]
 size = Vector2(2397, 1296.5)
 
-[node name="Start" type="Node2D"]
+[node name="level1" type="Node2D"]
 script = ExtResource("1_2iih8")
 
 [node name="Cursor" parent="." instance=ExtResource("1_tfnar")]
