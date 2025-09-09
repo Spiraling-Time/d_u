@@ -21,4 +21,4 @@ func _physics_process(delta: float) -> void:
 			
 
 func next_level():
-	print("clicked")
+	get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level2.tscn")

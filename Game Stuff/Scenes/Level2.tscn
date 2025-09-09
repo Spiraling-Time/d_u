@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://bgtoihumjxuan"]
+
+[ext_resource type="Script" uid="uid://ennk2iqh8tcw" path="res://Game Stuff/Code/start.gd" id="1_j2pbc"]
+[ext_resource type="PackedScene" uid="uid://doflnvr2edk81" path="res://Game Stuff/Scenes/cursor.tscn" id="2_1f38y"]
+[ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="3_1htxn"]
+[ext_resource type="Texture2D" uid="uid://c53jdgysv54gp" path="res://Game Stuff/Assets/Difficulty Untested Sprites (4).png" id="4_vlnec"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfnar"]
+texture = ExtResource("3_1htxn")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+
+[sub_resource type="TileSet" id="TileSet_htoip"]
+tile_size = Vector2i(100, 100)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_tfnar")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iih8"]
+texture = ExtResource("4_vlnec")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_80feh"]
+tile_size = Vector2i(100, 100)
+sources/0 = SubResource("TileSetAtlasSource_2iih8")
+
+[node name="Start" type="Node2D"]
+script = ExtResource("1_j2pbc")
+
+[node name="Cursor" parent="." instance=ExtResource("2_1f38y")]
+
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="Bad" type="TileMapLayer" parent="Stuff"]
+tile_set = SubResource("TileSet_htoip")
+
+[node name="Good" type="TileMapLayer" parent="Stuff"]
+tile_set = SubResource("TileSet_80feh")
