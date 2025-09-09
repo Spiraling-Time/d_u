@@ -19,7 +19,6 @@ func _on_timer_timeout() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print(world.level)
 	if world.level == "level3":
-		velocity.y = -50
+		velocity.y = 900
 		move_and_slide()
