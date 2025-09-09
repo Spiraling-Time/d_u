@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c63khq5x27mk6"
-path="res://.godot/imported/Difficulty Untested Sprites.png-325b8490e7b5f1ef72a3e544f6bf1d91.ctex"
+uid="uid://b8krnwffn81ip"
+path="res://.godot/imported/Difficulty Untested Sprites (3).png-d2fb6f50bb95569ea93f68b4e8cfc274.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Stuff/Assets/Difficulty Untested Sprites.png"
-dest_files=["res://.godot/imported/Difficulty Untested Sprites.png-325b8490e7b5f1ef72a3e544f6bf1d91.ctex"]
+source_file="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png"
+dest_files=["res://.godot/imported/Difficulty Untested Sprites (3).png-d2fb6f50bb95569ea93f68b4e8cfc274.ctex"]
 
 [params]
 

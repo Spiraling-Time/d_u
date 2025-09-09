@@ -7,4 +7,4 @@
 [node name="cursorSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_vuf5m")
 
-[node name="Camera2D" type="Camera2D" parent="cursorSprite"]
+[node name="Camera2D" type="Camera2D" parent="."]
