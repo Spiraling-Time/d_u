@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://doflnvr2edk81"]
+
+[ext_resource type="Texture2D" uid="uid://c4f1m1c8ob8ob" path="res://Game Stuff/Assets/Difficulty Untested Sprites (2).png" id="1_vuf5m"]
+
+[node name="Cursor" type="Node2D"]
+
+[node name="cursorSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_vuf5m")
+
+[node name="Camera2D" type="Camera2D" parent="cursorSprite"]
