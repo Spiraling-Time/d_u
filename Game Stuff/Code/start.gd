@@ -19,6 +19,12 @@ func _physics_process(delta: float) -> void:
 			game_playing = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			
+	if !get_viewport().get_visible_rect().has_point(get_viewport().get_mouse_position()):
+		if game_playing:
+			game_playing = false
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
 
 func next_level():
 	get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level2.tscn")

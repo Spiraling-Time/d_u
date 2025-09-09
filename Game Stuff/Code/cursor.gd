@@ -12,7 +12,8 @@ var previous_pos: Vector2
 
 
 func _ready() -> void:
-	pass
+	mouse.position = Vector2.ZERO
+	previous_pos = mouse.position
 
 func _physics_process(delta: float) -> void:
 	if world.game_playing:
