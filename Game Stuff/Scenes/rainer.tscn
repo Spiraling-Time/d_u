@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cewo10he1svts"]
+
+[ext_resource type="Script" uid="uid://nh3s00pcyd7w" path="res://Game Stuff/Code/rainer.gd" id="1_i3wh7"]
+[ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="2_w43qp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w43qp"]
+size = Vector2(300, 100)
+
+[node name="Rainer" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_i3wh7")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_w43qp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-100, 0)
+texture = ExtResource("2_w43qp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(100, 0)
+texture = ExtResource("2_w43qp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w43qp")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

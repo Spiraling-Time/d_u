@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://pds6r4ft2lgm"]
+
+[ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="1_06joy"]
+[ext_resource type="Script" uid="uid://1s74tjot5q3g" path="res://Game Stuff/Code/block.gd" id="1_6mwkm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mwkm"]
+size = Vector2(100, 100)
+
+[node name="Block" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_6mwkm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_06joy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6mwkm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 50.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

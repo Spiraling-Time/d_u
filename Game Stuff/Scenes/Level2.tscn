@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgtoihumjxuan"]
+[gd_scene load_steps=10 format=4 uid="uid://bgtoihumjxuan"]
 
 [ext_resource type="Script" uid="uid://ennk2iqh8tcw" path="res://Game Stuff/Code/start.gd" id="1_j2pbc"]
 [ext_resource type="PackedScene" uid="uid://doflnvr2edk81" path="res://Game Stuff/Scenes/cursor.tscn" id="2_1f38y"]
 [ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="3_1htxn"]
 [ext_resource type="Texture2D" uid="uid://c53jdgysv54gp" path="res://Game Stuff/Assets/Difficulty Untested Sprites (4).png" id="4_vlnec"]
+[ext_resource type="PackedScene" uid="uid://cewo10he1svts" path="res://Game Stuff/Scenes/rainer.tscn" id="5_1f38y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfnar"]
 texture = ExtResource("3_1htxn")
@@ -33,7 +34,17 @@ script = ExtResource("1_j2pbc")
 [node name="Stuff" type="Node2D" parent="."]
 
 [node name="Bad" type="TileMapLayer" parent="Stuff"]
+tile_map_data = PackedByteArray("AAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAD7/9n/AAAAAAAAAAD7/9r/AAAAAAAAAAD7/9v/AAAAAAAAAAD7/9z/AAAAAAAAAAD7/93/AAAAAAAAAAD7/97/AAAAAAAAAAD7/9//AAAAAAAAAAD7/+D/AAAAAAAAAAD7/+H/AAAAAAAAAAD7/+L/AAAAAAAAAAD7/+P/AAAAAAAAAAD7/+T/AAAAAAAAAAD7/+X/AAAAAAAAAAD7/+b/AAAAAAAAAAD7/+f/AAAAAAAAAAD7/+j/AAAAAAAAAAD7/+n/AAAAAAAAAAD7/+r/AAAAAAAAAAD7/+v/AAAAAAAAAAD7/+z/AAAAAAAAAAD7/+3/AAAAAAAAAAD7/+7/AAAAAAAAAAD7/+//AAAAAAAAAAD7//D/AAAAAAAAAAD7//H/AAAAAAAAAAD7//L/AAAAAAAAAAD7//P/AAAAAAAAAAD7//T/AAAAAAAAAAD7//X/AAAAAAAAAAD7//b/AAAAAAAAAAD7//f/AAAAAAAAAAD7//j/AAAAAAAAAAD7//n/AAAAAAAAAAD7//r/AAAAAAAAAAD7//v/AAAAAAAAAAD7//z/AAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAAEANn/AAAAAAAAAAAEANr/AAAAAAAAAAAEANv/AAAAAAAAAAAEANz/AAAAAAAAAAAEAN3/AAAAAAAAAAAEAN7/AAAAAAAAAAAEAN//AAAAAAAAAAAEAOD/AAAAAAAAAAAEAOH/AAAAAAAAAAAEAOL/AAAAAAAAAAAEAOP/AAAAAAAAAAAEAOT/AAAAAAAAAAAEAOX/AAAAAAAAAAAEAOb/AAAAAAAAAAAEAOf/AAAAAAAAAAAEAOj/AAAAAAAAAAAEAOn/AAAAAAAAAAAEAOr/AAAAAAAAAAAEAOv/AAAAAAAAAAAEAOz/AAAAAAAAAAAEAO3/AAAAAAAAAAAEAO7/AAAAAAAAAAAEAO//AAAAAAAAAAAEAPD/AAAAAAAAAAAEAPH/AAAAAAAAAAAEAPL/AAAAAAAAAAAEAPP/AAAAAAAAAAAEAPT/AAAAAAAAAAAEAPX/AAAAAAAAAAAEAPb/AAAAAAAAAAAEAPf/AAAAAAAAAAAEAPj/AAAAAAAAAAAEAPn/AAAAAAAAAAAEAPr/AAAAAAAAAAAEAPv/AAAAAAAAAAAEAPz/AAAAAAAAAAAEAP3/AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_htoip")
 
 [node name="Good" type="TileMapLayer" parent="Stuff"]
 tile_set = SubResource("TileSet_80feh")
+
+[node name="Rainer0" parent="." instance=ExtResource("5_1f38y")]
+position = Vector2(0, -3779)
+
+[node name="Rainer1" parent="." instance=ExtResource("5_1f38y")]
+position = Vector2(300, -3779)
+
+[node name="Rainer2" parent="." instance=ExtResource("5_1f38y")]
+position = Vector2(-300, -3779)
