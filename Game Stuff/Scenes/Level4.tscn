@@ -1,0 +1,68 @@
+[gd_scene load_steps=14 format=4 uid="uid://bcebigigipt4j"]
+
+[ext_resource type="Script" uid="uid://ennk2iqh8tcw" path="res://Game Stuff/Code/start.gd" id="1_clt8u"]
+[ext_resource type="PackedScene" uid="uid://doflnvr2edk81" path="res://Game Stuff/Scenes/cursor.tscn" id="2_dyiy5"]
+[ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="3_eubi6"]
+[ext_resource type="Texture2D" uid="uid://cc34yjbu3x7g7" path="res://Game Stuff/Assets/Difficulty Untested Sprites (1).png" id="4_l4hc1"]
+[ext_resource type="Texture2D" uid="uid://c53jdgysv54gp" path="res://Game Stuff/Assets/Difficulty Untested Sprites (4).png" id="5_tsqaj"]
+[ext_resource type="PackedScene" uid="uid://cewo10he1svts" path="res://Game Stuff/Scenes/rainer.tscn" id="6_adoqf"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_vlnec"]
+tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfnar"]
+texture = ExtResource("3_eubi6")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+
+[sub_resource type="TileSet" id="TileSet_htoip"]
+tile_size = Vector2i(100, 100)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_tfnar")
+pattern_0 = SubResource("TileMapPattern_vlnec")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3i0dx"]
+texture = ExtResource("4_l4hc1")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2a7xr"]
+tile_size = Vector2i(100, 100)
+sources/0 = SubResource("TileSetAtlasSource_3i0dx")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iih8"]
+texture = ExtResource("5_tsqaj")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_80feh"]
+tile_size = Vector2i(100, 100)
+sources/0 = SubResource("TileSetAtlasSource_2iih8")
+
+[node name="level4" type="Node2D"]
+script = ExtResource("1_clt8u")
+
+[node name="Cursor" parent="." instance=ExtResource("2_dyiy5")]
+
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="Bad" type="TileMapLayer" parent="Stuff"]
+tile_map_data = PackedByteArray("AAD0//7/AAAAAAAAAAD1//7/AAAAAAAAAAD2//7/AAAAAAAAAAD3//7/AAAAAAAAAAD4//7/AAAAAAAAAAD5//7/AAAAAAAAAAD6//7/AAAAAAAAAAD7//7/AAAAAAAAAAD8//7/AAAAAAAAAAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAALAP//AAAAAAAAAAALAAAAAAAAAAAAAAALAAEAAAAAAAAAAAD0/wEAAAAAAAAAAAD1/wEAAAAAAAAAAAD2/wEAAAAAAAAAAAD3/wEAAAAAAAAAAAD4/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAD0////AAAAAAAAAAD0/wAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_htoip")
+
+[node name="grey" type="TileMapLayer" parent="Stuff"]
+tile_set = SubResource("TileSet_2a7xr")
+
+[node name="Good" type="TileMapLayer" parent="Stuff"]
+tile_set = SubResource("TileSet_80feh")
+
+[node name="Rainers" type="Node2D" parent="Stuff"]
+
+[node name="Rainer1" parent="Stuff/Rainers" instance=ExtResource("6_adoqf")]
+position = Vector2(1066, 0)
+rotation = 1.5708
+
+[node name="Rainer2" parent="Stuff/Rainers" instance=ExtResource("6_adoqf")]
+position = Vector2(-1066, 0)
+rotation = -1.5708

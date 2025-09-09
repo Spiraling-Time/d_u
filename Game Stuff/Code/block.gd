@@ -4,11 +4,13 @@ extends CharacterBody2D
 
 var speed: int = 10
 
+var dir = Vector2.DOWN
+
 func _ready() -> void:
 	despawn.start()
 
 func _physics_process(delta: float) -> void:
-	velocity.y += speed
+	velocity += dir*speed
 	move_and_slide()
 
 func _on_timer_timeout() -> void:
