@@ -20,9 +20,7 @@ func _physics_process(delta: float) -> void:
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			
 	if !get_viewport().get_visible_rect().has_point(get_viewport().get_mouse_position()):
-		if game_playing:
-			game_playing = false
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if game_playing: get_tree().reload_current_scene()
 
 
 
