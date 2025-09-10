@@ -86,6 +86,6 @@ texture = ExtResource("2_wkypx")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-152, 51)
-polygon = PackedVector2Array(300, 0, 300, -100, 500, -100, 500, -200, 400, -200, 400, -300, 300, -300, 300, -400, 0, -400, 0, -300, -100, -300, -100, -200, -200, -200, -200, -100, 0, -100, 0, 0)
+polygon = PackedVector2Array(300, 0, 300, -100, 500, -100, 500, -200, 400, -200, 400, -300, 300, -300, 300, -400, 200, -400, 200, -200, 100, -200, 100, -400, 0, -400, 0, -300, -100, -300, -100, -200, -200, -200, -200, -100, 0, -100, 0, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

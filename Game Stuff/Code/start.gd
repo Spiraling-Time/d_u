@@ -35,9 +35,7 @@ func next_level():
 	elif level == "level2": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level3.tscn")
 	elif level == "level3": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level4.tscn")
 	elif level == "level4": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level5.tscn")
-	elif level == "level5":
-		get_tree().change_scene_to_file("res://Game Stuff/Scenes/WIN.tscn")
-		print("WIN")
+	elif level == "level5": get_tree().change_scene_to_file("res://Game Stuff/Scenes/WIN.tscn")
 
 func _on_audio_stream_player_finished() -> void:
 	audio.play()
