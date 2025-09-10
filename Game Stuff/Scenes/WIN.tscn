@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://dm834gkhjyw5f"]
+[gd_scene load_steps=14 format=4 uid="uid://dm834gkhjyw5f"]
 
 [ext_resource type="Script" uid="uid://ennk2iqh8tcw" path="res://Game Stuff/Code/start.gd" id="1_rsjj5"]
 [ext_resource type="PackedScene" uid="uid://doflnvr2edk81" path="res://Game Stuff/Scenes/cursor.tscn" id="2_hthmk"]
 [ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="3_55d7q"]
 [ext_resource type="Texture2D" uid="uid://cc34yjbu3x7g7" path="res://Game Stuff/Assets/Difficulty Untested Sprites (1).png" id="4_xss8e"]
 [ext_resource type="Texture2D" uid="uid://c53jdgysv54gp" path="res://Game Stuff/Assets/Difficulty Untested Sprites (4).png" id="5_jq6wl"]
+[ext_resource type="AudioStream" uid="uid://b24ole7yommbj" path="res://Game Stuff/Audio/music-for-puzzle-game-146738.mp3" id="6_1d1w7"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vlnec"]
 tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0)
@@ -58,3 +59,7 @@ tile_set = SubResource("TileSet_2a7xr")
 [node name="Good" type="TileMapLayer" parent="Stuff"]
 tile_map_data = PackedByteArray("AAD2//v/AAAAAAAAAAD3//z/AAAAAAAAAAD3//3/AAAAAAAAAAD4//v/AAAAAAAAAAD6//v/AAAAAAAAAAD6//z/AAAAAAAAAAD6//3/AAAAAAAAAAD7//3/AAAAAAAAAAD8//3/AAAAAAAAAAD8//z/AAAAAAAAAAD8//v/AAAAAAAAAAD7//v/AAAAAAAAAAD+//v/AAAAAAAAAAD+//z/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAD3/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wQAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_80feh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1d1w7")
+volume_db = -5.0

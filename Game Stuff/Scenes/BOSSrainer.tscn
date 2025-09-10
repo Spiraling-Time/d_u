@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxvm03hxsrsey"]
+[gd_scene load_steps=5 format=3 uid="uid://cxvm03hxsrsey"]
 
 [ext_resource type="Script" uid="uid://nh3s00pcyd7w" path="res://Game Stuff/Code/rainer.gd" id="1_352e4"]
 [ext_resource type="Texture2D" uid="uid://b8krnwffn81ip" path="res://Game Stuff/Assets/Difficulty Untested Sprites (3).png" id="2_wkypx"]
 [ext_resource type="Texture2D" uid="uid://c53jdgysv54gp" path="res://Game Stuff/Assets/Difficulty Untested Sprites (4).png" id="3_vs0dl"]
 [ext_resource type="Texture2D" uid="uid://cc34yjbu3x7g7" path="res://Game Stuff/Assets/Difficulty Untested Sprites (1).png" id="4_gp07c"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w43qp"]
-size = Vector2(300, 100)
 
 [node name="BOSSRainer" type="CharacterBody2D"]
 collision_mask = 0
@@ -15,9 +12,6 @@ script = ExtResource("1_352e4")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_w43qp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wkypx")
@@ -89,5 +83,9 @@ texture = ExtResource("2_wkypx")
 [node name="Sprite2D18" type="Sprite2D" parent="."]
 position = Vector2(-200, -200)
 texture = ExtResource("2_wkypx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-152, 51)
+polygon = PackedVector2Array(300, 0, 300, -100, 500, -100, 500, -200, 400, -200, 400, -300, 300, -300, 300, -400, 0, -400, 0, -300, -100, -300, -100, -200, -200, -200, -200, -100, 0, -100, 0, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

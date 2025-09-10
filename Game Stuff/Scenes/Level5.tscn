@@ -66,9 +66,11 @@ tile_set = SubResource("TileSet_80feh")
 
 [node name="BOSSRainer" parent="Stuff" instance=ExtResource("6_auv3p")]
 z_index = 2
-position = Vector2(0, -522)
+position = Vector2(0, 575)
 
 [node name="fakebutton" type="CharacterBody2D" parent="Stuff/BOSSRainer"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/BOSSRainer/fakebutton"]
 position = Vector2(0, -200.125)
