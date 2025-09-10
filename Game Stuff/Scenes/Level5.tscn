@@ -97,9 +97,11 @@ position = Vector2(-300, -1000)
 position = Vector2(300, -1000)
 
 [node name="Rainer7" parent="Stuff/Rainer" instance=ExtResource("6_4p03h")]
+z_index = 4
 position = Vector2(100, -1200)
 
 [node name="Rainer8" parent="Stuff/Rainer" instance=ExtResource("6_4p03h")]
+z_index = 4
 position = Vector2(-100, -1200)
 
 [node name="Rainer9" parent="Stuff/Rainer" instance=ExtResource("6_4p03h")]

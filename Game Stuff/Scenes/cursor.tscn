@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c4f1m1c8ob8ob" path="res://Game Stuff/Assets/Difficulty Untested Sprites (2).png" id="1_vuf5m"]
 
 [node name="Cursor" type="Node2D"]
-z_index = 4
+z_index = 5
 script = ExtResource("1_ttvx4")
 
 [node name="cursorSprite" type="Sprite2D" parent="."]
