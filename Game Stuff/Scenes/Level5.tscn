@@ -63,8 +63,6 @@ tile_set = SubResource("TileSet_2a7xr")
 [node name="Good" type="TileMapLayer" parent="Stuff"]
 tile_set = SubResource("TileSet_80feh")
 
-[node name="Rainers" type="Node2D" parent="Stuff"]
-
 [node name="BOSSRainer" parent="Stuff" instance=ExtResource("6_auv3p")]
 z_index = 2
 position = Vector2(0, -522)

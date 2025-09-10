@@ -25,17 +25,18 @@ func _physics_process(delta: float) -> void:
 		if ray.is_colliding():
 			get_tree().reload_current_scene()
 		
-		if !world.level == "level5":
+		if world.level != "level5":
 			if Input.get_action_strength("up") >= 0.5:
 				camera.position.y -= speed
 			elif Input.get_action_strength("down") >= 0.5:
 				camera.position.y += speed
-		else: camera.position.y -= speed
+		elif world.level != "WIN": camera.position.y -= speed
 		
-		if Input.get_action_strength("left") >= 0.5:
-			camera.position.x -= speed
-		elif Input.get_action_strength("right") >= 0.5:
-			camera.position.x += speed
+		if world.level != "WIN":
+			if Input.get_action_strength("left") >= 0.5:
+				camera.position.x -= speed
+			elif Input.get_action_strength("right") >= 0.5:
+				camera.position.x += speed
 		
 		button_ray.force_raycast_update()
 		if Input.is_action_just_pressed("clicked"):
