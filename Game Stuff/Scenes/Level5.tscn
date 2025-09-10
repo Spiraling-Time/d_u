@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dohi6u7t1ko6q"]
+[gd_scene load_steps=17 format=4 uid="uid://dohi6u7t1ko6q"]
 
 [ext_resource type="Script" uid="uid://ennk2iqh8tcw" path="res://Game Stuff/Code/start.gd" id="1_auv3p"]
 [ext_resource type="PackedScene" uid="uid://doflnvr2edk81" path="res://Game Stuff/Scenes/cursor.tscn" id="2_fh3i4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c53jdgysv54gp" path="res://Game Stuff/Assets/Difficulty Untested Sprites (4).png" id="5_tr8vx"]
 [ext_resource type="PackedScene" uid="uid://cewo10he1svts" path="res://Game Stuff/Scenes/rainer.tscn" id="6_4p03h"]
 [ext_resource type="PackedScene" uid="uid://cxvm03hxsrsey" path="res://Game Stuff/Scenes/BOSSrainer.tscn" id="6_auv3p"]
+[ext_resource type="AudioStream" uid="uid://b24ole7yommbj" path="res://Game Stuff/Audio/music-for-puzzle-game-146738.mp3" id="8_qm01j"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vlnec"]
 tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0)
@@ -112,3 +113,7 @@ position = Vector2(1000, -200)
 
 [node name="Rainer12" parent="Stuff/Rainer" instance=ExtResource("6_4p03h")]
 position = Vector2(-1000, -200)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qm01j")
+volume_db = -5.0

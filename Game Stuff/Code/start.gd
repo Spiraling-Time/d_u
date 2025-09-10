@@ -3,6 +3,8 @@ extends Node2D
 
 @onready var level = name
 
+@onready var audio = $AudioStreamPlayer
+
 var game_playing: bool = true
 
 
@@ -10,6 +12,7 @@ func _ready() -> void:
 	randomize()
 	Input.warp_mouse(get_viewport().get_window().size / 2)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	audio.play()
 
 func _physics_process(delta: float) -> void:
 	
@@ -28,4 +31,11 @@ func _physics_process(delta: float) -> void:
 
 
 func next_level():
-	get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level2.tscn")
+	if level == "level1": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level2.tscn")
+	elif level == "level2": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level3.tscn")
+	elif level == "level3": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level4.tscn")
+	elif level == "level4": get_tree().change_scene_to_file("res://Game Stuff/Scenes/Level5.tscn")
+	elif level == "level5": get_tree().change_scene_to_file("res://Game Stuff/Scenes/WIN.tscn")
+
+func _on_audio_stream_player_finished() -> void:
+	audio.play()
