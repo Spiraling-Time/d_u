@@ -8,7 +8,7 @@ var game_playing: bool = true
 
 func _ready() -> void:
 	randomize()
-	Input.warp_mouse(get_viewport().get_visible_rect().size / 2)
+	Input.warp_mouse(get_viewport().get_window().size / 2)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _physics_process(delta: float) -> void:
