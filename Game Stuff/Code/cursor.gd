@@ -25,10 +25,12 @@ func _physics_process(delta: float) -> void:
 		if ray.is_colliding():
 			get_tree().reload_current_scene()
 		
-		if Input.get_action_strength("up") >= 0.5:
-			camera.position.y -= speed
-		elif Input.get_action_strength("down") >= 0.5:
-			camera.position.y += speed
+		if !world.level == "level5":
+			if Input.get_action_strength("up") >= 0.5:
+				camera.position.y -= speed
+			elif Input.get_action_strength("down") >= 0.5:
+				camera.position.y += speed
+		else: camera.position.y -= speed
 		
 		if Input.get_action_strength("left") >= 0.5:
 			camera.position.x -= speed
