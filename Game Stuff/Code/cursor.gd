@@ -14,6 +14,7 @@ var previous_pos: Vector2
 func _ready() -> void:
 	mouse.position = Vector2.ZERO
 	previous_pos = mouse.position
+	while mouse.position.distance_to(Vector2.ZERO) >= 100: mouse.position = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
 	if world.game_playing:
